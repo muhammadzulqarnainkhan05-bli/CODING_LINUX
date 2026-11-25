@@ -1,16 +1,16 @@
 import os
 
 # ---------- Folder banana (na ho to) ----------
-os.makedirs("written_files", exist_ok=True)
+os.makedirs("wrifi", exist_ok=True)
 
 
 # ---------- Functions ----------
 def file_path(naam):
-    """Naam se poora raasta banata hai: written_files/naam.txt"""
-    return f"written_files/{naam}.txt"
+    """Naam se poora raasta banata hai: wrifi/naam.txt"""
+    return f"wrifi/{naam}.txt"
 
 
-def write_file(naam, text):
+def e_file(naam, text):
     """"w": purana sab mita kar naya likhta hai"""
     with open(file_path(naam), "w") as f:
         f.write(text + "\n")
@@ -44,8 +44,8 @@ def show_lines(naam):
 
 
 def list_files():
-    """written_files ki sari files ke naam"""
-    files = os.listdir("written_files")
+    """wrifi ki sari files ke naam"""
+    files = os.listdir("wrifi")
     if not files:
         print("Abhi koi file nahi")
     for f in files:
